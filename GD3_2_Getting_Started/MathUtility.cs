@@ -35,11 +35,26 @@ namespace GDLibrary.Utility
         /// <param name="hi">Integer value >= lo</param>
         /// <param name="excl">Integer value which will be excluded from lo-hi range</param>
         /// <returns>Random integer</returns>
-        public static int RandInRangeExcl(int lo, int hi, int excl)
+        public static int GetRandInRangeExcl(int lo, int hi, int excl)
         {
-            throw new NotImplementedException("It's end of class! Do next class!");
+            if ((hi == lo) || (hi < lo))
+                throw new ArgumentException("hi must be > to lo");
+
+            if (!((excl >= lo) && (excl <= hi)))
+                throw new ArgumentException("excl must be in lo - hi range");
+
+            Random rand = new Random();
+            int randNumber = -1;
+            do
+            {
+                randNumber = rand.Next(lo, hi);    //get a random number
+            } while (excl == randNumber); //test & repeat if the value == excl
+
+            return randNumber;
+
+            // return -1;
+            //throw new NotImplementedException("It's end of class! " +
+            //                                 "Do next class!");
         }
-
-
     }
 }

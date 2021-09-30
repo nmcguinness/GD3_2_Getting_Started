@@ -16,9 +16,7 @@ namespace GDLibrary
 {
     class Program
     {
-
         public void GetIt() => Console.WriteLine("sdsdfsfd");
-
 
         static void Main(string[] args)
         {
@@ -37,7 +35,6 @@ namespace GDLibrary
             Console.WriteLine($"{x} and {y}");
 
             #endregion
-
 
             #region GetRandInRange Demo
             for (int i = 1; i <= 10; i++)
