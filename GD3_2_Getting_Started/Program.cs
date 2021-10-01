@@ -46,13 +46,21 @@ namespace GDLibrary
 
             #endregion
 
+            #region Point2D Demo
             Point2D p1 = new Point2D(5, 20);
             p1.X = 25;
             Console.WriteLine(p1.X);
-            Console.WriteLine(p1);
+            Console.WriteLine(p1); 
+            #endregion
 
+            Integer3 myIntA = new Integer3(1, 2, 3);
+            Integer3 cloneMyIntA = (Integer3)myIntA.Clone();
+            Integer3 cloneMyIntB = myIntA.Clone() as Integer3;
 
-
+            //test if we have a shallow or deep copy?
+            myIntA.X = 100000;
+            Console.WriteLine(myIntA.X);
+            Console.WriteLine(cloneMyIntB.X);
 
 
         }
