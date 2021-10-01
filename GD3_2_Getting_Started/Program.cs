@@ -11,6 +11,7 @@
 ///
 using GDLibrary.Utility;
 using System;
+using GDLibrary.Types;
 
 namespace GDLibrary
 {
@@ -44,6 +45,16 @@ namespace GDLibrary
             }
 
             #endregion
+
+            Point2D p1 = new Point2D(5, 20);
+            p1.X = 25;
+            Console.WriteLine(p1.X);
+            Console.WriteLine(p1);
+
+
+
+
+
         }
 
         //EX - 1
@@ -67,11 +78,8 @@ namespace GDLibrary
         {
             //TODO - return to this immediately
             //HACK - works now but fails > 100 input
-
-
             throw new NotImplementedException("sdfsdfsdfsdfd");
-
-           return -1;
+            return -1;
         }
 
 

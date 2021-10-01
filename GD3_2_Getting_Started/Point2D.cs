@@ -33,7 +33,6 @@ namespace  GDLibrary.Types
         }
         #endregion
 
-
         #region Constructor
         //public Point2D()
         //{
@@ -47,6 +46,7 @@ namespace  GDLibrary.Types
         } 
         #endregion
 
+        //EX - 4
         public override string ToString()
         {
             return $"{x},{y}"; //x + "," + y
