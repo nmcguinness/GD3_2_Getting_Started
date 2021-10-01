@@ -1,5 +1,6 @@
-﻿//x, y position, integers
-
+﻿/// <summary>
+/// Represents a point in 2D space and provides related methods and operators
+/// </summary>
 namespace  GDLibrary.Types
 {
     public struct Point2D
