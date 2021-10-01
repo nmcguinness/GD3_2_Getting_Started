@@ -43,6 +43,7 @@ namespace  GDLibrary.Types
         {
             this.x = x;
             this.y = y;
+            
         } 
         #endregion
 
