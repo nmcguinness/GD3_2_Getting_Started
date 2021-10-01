@@ -6,28 +6,27 @@
 /// 4) Using Random() to generate a GetRandInRange
 /// 5) Solving get GetRandInRangeExcl
 ///
-/// 
+///
 /// </summary>
-/// 
+///
 using GDLibrary.Utility;
 using System;
 
 namespace GDLibrary
 {
-    class Program
+    internal class Program
     {
         public void GetIt() => Console.WriteLine("sdsdfsfd");
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Program p = new Program();
             p.Start();
         }
 
-        void Start() //non-static or instance method
+        private void Start() //non-static or instance method
         {
             #region Print Demo
-
             //value types (pass by copy)
             int x = 10;
             double y = 20;
@@ -37,15 +36,17 @@ namespace GDLibrary
             #endregion
 
             #region GetRandInRange Demo
+
             for (int i = 1; i <= 10; i++)
             {
                 int randNum = MathUtility.GetRandInRange(5, 10);
                 Console.WriteLine(randNum);
-            } 
-            #endregion
+            }
 
+            #endregion
         }
 
+        //EX - 1
         /// <summary>
         /// Simple method to demonstrate that value types are passed by copy
         /// and so changing the value INSIDE the method does not affect the variable
@@ -53,7 +54,7 @@ namespace GDLibrary
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
-        void Print(int a, double b)
+        private void Print(int a, double b)
         {
             a = -10;
             b = 1E6; //1000000

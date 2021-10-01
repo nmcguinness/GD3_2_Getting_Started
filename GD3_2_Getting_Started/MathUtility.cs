@@ -12,6 +12,7 @@ namespace GDLibrary.Utility
     /// </example>
     class MathUtility
     {
+        //EX - 2
         /// <summary>
         /// Returns an int in the range lo - hi
         /// </summary>
@@ -27,7 +28,7 @@ namespace GDLibrary.Utility
             return rand.Next(lo, hi);
         }
 
-        //  (-10, 10, 0)
+        //EX - 3
         /// <summary>
         /// Returns an int in the range lo - hi, excluding excl value
         /// </summary>
