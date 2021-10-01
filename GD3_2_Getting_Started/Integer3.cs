@@ -1,5 +1,6 @@
 ﻿//EX - 5
 
+using System.Numerics;
 using System.Transactions;
 
 namespace GDLibrary.Types
@@ -12,7 +13,9 @@ namespace GDLibrary.Types
     public class Integer3
     {
         #region Member Variables
-        private int x, y, z; 
+        private int x, y, z;
+   //     private Vector3 vec;
+
         #endregion
 
         #region Properties
@@ -49,9 +52,23 @@ namespace GDLibrary.Types
             return $"{x},{y},{z}";
         }
 
-        public object Clone()
+        //public object Clone() //Shallow copy
+        //{
+        //    return this; //reference to the current object
+        //}
+
+        //public object Clone() //Deep copy - v1
+        //{
+        //    return new Integer3(x,y,z); //reference to a new object
+        //}
+
+        public object Clone() //Deep copy - v2
         {
-            return this; //reference to the current object
+            return this.MemberwiseClone();  
+            //reference to a new object where all value types are copied and all
+            //reference types are copied only by address
+            //remember the example of the DrawnObject(x,y,z, model, texture) and the trees
+
         }
     }
 }
