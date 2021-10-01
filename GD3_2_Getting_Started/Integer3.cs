@@ -20,14 +20,19 @@ namespace GDLibrary.Types
                 this.x = value;
             }
         }
-
-        public Integer3()
+        #region Constructors
+        public Integer3() : this(0, 0, 0)
         {
-
+            //this.x = 0;
+            //this.y = 0;
+            //this.z = 0;
         }
-
-        public Integer3()
+        public Integer3(int x, int y, int z)
         {
-        }
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        } 
+        #endregion
     }
 }
