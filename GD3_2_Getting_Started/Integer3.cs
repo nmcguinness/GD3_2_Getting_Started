@@ -1,4 +1,7 @@
 ﻿//EX - 5
+
+using System.Transactions;
+
 namespace GDLibrary.Types
 {
     /// <summary>
@@ -8,7 +11,11 @@ namespace GDLibrary.Types
     /// </summary>
     public class Integer3
     {
-        private int x, y, z;
+        #region Member Variables
+        private int x, y, z; 
+        #endregion
+
+        #region Properties
         public int X
         {
             get
@@ -19,7 +26,9 @@ namespace GDLibrary.Types
             {
                 this.x = value;
             }
-        }
+        } 
+        #endregion
+
         #region Constructors
         public Integer3() : this(0, 0, 0)
         {
@@ -34,5 +43,15 @@ namespace GDLibrary.Types
             this.z = z;
         } 
         #endregion
+
+        public override string ToString()
+        {
+            return $"{x},{y},{z}";
+        }
+
+        public object Clone()
+        {
+            return this; //reference to the current object
+        }
     }
 }
