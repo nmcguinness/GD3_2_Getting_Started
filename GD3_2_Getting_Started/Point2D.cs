@@ -10,7 +10,6 @@ namespace  GDLibrary.Types
         private int y;
         #endregion
 
-        //property (getter, setter)
         #region Properties
         public int X //Age
         {
@@ -31,13 +30,28 @@ namespace  GDLibrary.Types
                     this.x = 0;
                 }
             }
-        } 
+        }
         #endregion
 
+
+        #region Constructor
+        //public Point2D()
+        //{
+        //    this.x = 0;
+        //    this.y = 0;
+        //}
         public Point2D(int x, int y)
         {
             this.x = x;
             this.y = y;
+        } 
+        #endregion
+
+        public override string ToString()
+        {
+            return $"{x},{y}"; //x + "," + y
         }
+
+
     }
 } 

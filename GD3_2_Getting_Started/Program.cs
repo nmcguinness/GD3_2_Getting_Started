@@ -61,5 +61,23 @@ namespace GDLibrary
             Console.WriteLine($"{a} and {b}");
             //Console.WriteLine(a + " and " + b);
         }
+
+
+        int DoSomething()
+        {
+            //TODO - return to this immediately
+            //HACK - works now but fails > 100 input
+
+
+            throw new NotImplementedException("sdfsdfsdfsdfd");
+
+           return -1;
+        }
+
+
+
+
+
+
     }
 }
