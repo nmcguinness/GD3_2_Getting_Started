@@ -11,11 +11,23 @@ namespace GDLibrary.Actor
     {
         private string texture, model, color;
 
+        //to do - Properties, ToString, Clone, DeepClone
         public DrawnActor(Vector3 translation, string texture,
             string model, string color) : base(translation)
         {
             this.texture = texture;
             //...
+        }
+
+        public new string ToString()
+        {
+            return base.ToString()
+                + ","
+                + texture
+                 + ","
+                + model
+                 + ","
+                + color;
         }
     }
 }

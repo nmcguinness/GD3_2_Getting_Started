@@ -21,6 +21,11 @@ namespace GDLibrary.Actor
             this.translation = translation;
         }
 
+        public new string ToString()
+        {
+            return translation.ToString();
+        }
+
         public void Update()
         {
             Console.WriteLine("Updating...");
