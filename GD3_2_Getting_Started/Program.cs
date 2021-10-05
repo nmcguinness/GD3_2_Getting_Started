@@ -12,6 +12,10 @@
 using GDLibrary.Utility;
 using System;
 using GDLibrary.Types;
+using System.Numerics;
+using GDLibrary.Actor;
+using GDLibrary.Interfaces;
+using System.Collections.Generic;
 
 namespace GDLibrary
 {
@@ -68,6 +72,29 @@ namespace GDLibrary
             Console.WriteLine(cloneMyIntB.X);
 
             #endregion Clone Demo
+
+            Actor wall
+                = new Actor(new Vector3(0, 2, 0));
+
+            Camera3D mainHallSecurity
+                 = new Camera3D(
+                 new Vector3(20, 5, 0),
+                 80, 1.6f,
+                 new Vector3(0, 0, 1),
+                 new Vector3(0, 1, 0));
+
+            DrawnActor soldier1
+                = new DrawnActor(new Vector3(0, 0, 0),
+                "soldier_enemy.jpg",
+                "soldier.fbx",
+                "white"); //no blend color
+
+            List<IActor> actorList = new List<IActor>();
+            actorList.Add(mainHallSecurity);
+            actorList.Add(soldier1);
+
+            foreach (IActor actor in actorList)
+                actor.Update();
         }
 
         //EX - 1

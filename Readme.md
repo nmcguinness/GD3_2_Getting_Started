@@ -19,9 +19,11 @@
 - [x] Understanding deep vs shallow copy
 
 ### Tasks - Week 3
-- [ ] Adding DeepClone
-- [ ] Adding ICloneable, IDeepCloneable
-- [ ] Demoing inheritance
+- [x] Adding DeepClone
+- [x] Adding ICloneable, IDeepCloneable
+- [x] Demoing inheritance
+- [x] Instanciating a list of IActor
+- [x] Iterate through a list of IActor
 - [ ] Method overriding with virtual and override
 - [ ] Demo Predicate
 - [ ] Demo generic class and generic method
