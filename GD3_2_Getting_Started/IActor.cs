@@ -1,4 +1,4 @@
-﻿namespace GDLibrary.Actor
+﻿namespace GDLibrary.Interfaces
 {
     /// <summary>
     /// Any updateable entity within our game will implement
