@@ -23,3 +23,5 @@
 - [ ] Adding ICloneable, IDeepCloneable
 - [ ] Demoing inheritance
 - [ ] Method overriding with virtual and override
+- [ ] Demo Predicate
+- [ ] Demo generic class and generic method

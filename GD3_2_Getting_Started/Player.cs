@@ -1,4 +1,6 @@
-﻿using GDLibrary.Types;
+﻿using GDLibrary.Interfaces;
+using GDLibrary.Types;
+using System;
 using System.Numerics;
 
 namespace GDLibrary
@@ -7,7 +9,8 @@ namespace GDLibrary
     /// <summary>
     /// Represents a Player entity in the game and stores name, texture and transformation related variables
     /// </summary>
-    public class Player //aggregate objects => "has-a"
+    //aggregate objects => "has-a"
+    public class Player : ICloneable, IDeepCloneable
     {
         #region Variables
 
@@ -19,7 +22,7 @@ namespace GDLibrary
 
         #region Properties
 
-        public string Name { get => name; set => name = value; }
+        public string Name { get => name; set => name = value; } //Expression bodied member
         public string Texture { get => texture; set => texture = value; }
         public Integer3 Translation { get => translation; set => translation = value; }
         public Vector3 Rotation { get => rotation; set => rotation = value; }
@@ -40,13 +43,19 @@ namespace GDLibrary
         }
 
         //name, texture, set all to most appropriate
-        public Player(string name, string texture) : this("", "", new Integer3(0, 0, 0), Vector3.Zero, Vector3.One)
+        public Player(string name, string texture)
+            : this("", "", new Integer3(0, 0, 0), Vector3.Zero /*new Vector3(0,0,0)*/, Vector3.One)
         {
         }
 
         //default
         public Player() : this("", "")
         {
+            //Name = "";
+            //Texture = "";
+            //Translation = new Integer3(0,0,0);
+            //Rotation = Vector3.Zero;
+            //Scale = Vector3.One;
         }
 
         #endregion Constructors
@@ -62,13 +71,18 @@ namespace GDLibrary
         //Clone - shallow
         public object Clone()
         {
-            return this;
+            return this; //reference to the object - shallow
         }
 
         //Clone - Deep
         public object DeepClone() //Lets add a new method that ALWAYS returns a deep copy
         {
-            return new Player(name, texture, translation.DeepClone() as Integer3, rotation, scale);
+            //new keyword indicates that memory is being assigned
+            return new Player(name, //value-type
+                texture,  //value-type
+                translation.DeepClone() as Integer3,  //reference-type because its a class
+                rotation, //value-type because its a struct
+                scale);  //value-type because its a struct
         }
 
         #endregion Overridden
