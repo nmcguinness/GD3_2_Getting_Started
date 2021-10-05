@@ -1,23 +1,25 @@
-﻿### Heading 3
-## Heading 2
-# Heading 1
+﻿
+**For a markdown cheat sheet see [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)**
 
-this is *italic* text
-this is **bold** text
-this is a (!)[]
+## 3D Game Engine Development - [Getting Started](https://github.com/nmcguinness/GD3_2_Getting_Started.git)
 
-* list 1
-* list 2
-* list 3
+### Further Reading
+- Understanding [Deep vs Shallow copy](https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c-sharp/)
+- Understanding [Operator overloading](https://www.tutorialspoint.com/csharp/csharp_operator_overloading.htm)
+- Understanding [Predicate](https://www.tutorialsteacher.com/csharp/csharp-predicate)
 
-***
+### Tasks - Week 2 
+- [x] Explaining namespaces, adding static methods
 
-this is a [link to markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+### Tasks - Week 2 
+- [x] Creating a MathUtility to add static methods
+- [x] Adding enums (PlayerType)
+- [x] Adding a struct (Point2D)
+- [x] Adding a class (Integer3, Player)
+- [x] Understanding deep vs shallow copy
 
-this is an ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png) image
-
-***
-
-### To Do
-[ ] First function
-[ ] Second function
+### Tasks - Week 3
+- [ ] Adding DeepClone
+- [ ] Adding ICloneable, IDeepCloneable
+- [ ] Demoing inheritance
+- [ ] Method overriding with virtual and override

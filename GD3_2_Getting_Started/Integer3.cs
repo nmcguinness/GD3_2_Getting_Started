@@ -1,8 +1,4 @@
 ﻿//EX - 5
-
-using System.Numerics;
-using System.Transactions;
-
 namespace GDLibrary.Types
 {
     /// <summary>
@@ -13,12 +9,13 @@ namespace GDLibrary.Types
     public class Integer3
     {
         #region Member Variables
-        private int x, y, z;
-   //     private Vector3 vec;
 
-        #endregion
+        private int x, y, z;
+
+        #endregion Member Variables
 
         #region Properties
+
         public int X
         {
             get
@@ -29,23 +26,53 @@ namespace GDLibrary.Types
             {
                 this.x = value;
             }
-        } 
-        #endregion
+        }
+
+        public int Y
+        {
+            get
+            {
+                return this.y;
+            }
+            set
+            {
+                this.y = value;
+            }
+        }
+
+        public int Z
+        {
+            get
+            {
+                return this.z;
+            }
+            set
+            {
+                this.z = value;
+            }
+        }
+
+        #endregion Properties
 
         #region Constructors
+
+        public Integer3(int x, int y, int z)
+        {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
         public Integer3() : this(0, 0, 0)
         {
             //this.x = 0;
             //this.y = 0;
             //this.z = 0;
         }
-        public Integer3(int x, int y, int z)
-        {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-        } 
-        #endregion
+
+        #endregion Constructors
+
+        #region Overridden
 
         public override string ToString()
         {
@@ -64,11 +91,17 @@ namespace GDLibrary.Types
 
         public object Clone() //Deep copy - v2
         {
-            return this.MemberwiseClone();  
+            return this.MemberwiseClone();
             //reference to a new object where all value types are copied and all
             //reference types are copied only by address
             //remember the example of the DrawnObject(x,y,z, model, texture) and the trees
-
         }
+
+        public object DeepClone() //Lets add a new method that ALWAYS returns a deep copy
+        {
+            return new Integer3(x, y, z); //reference to a new object
+        }
+
+        #endregion Overridden
     }
 }
