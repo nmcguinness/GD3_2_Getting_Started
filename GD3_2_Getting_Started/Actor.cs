@@ -1,5 +1,6 @@
 ﻿using GDLibrary.Interfaces;
 using System;
+using System.Numerics;
 
 namespace GDLibrary.Actor
 {
@@ -13,20 +14,12 @@ namespace GDLibrary.Actor
     /// </summary>
     public class Actor : IActor
     {
-        private int x;
+        private Vector3 translation;
 
-        //private ActorType actorType;
-        //public ActorType ActorType
-        //{
-        //    get
-        //    {
-        //        return this.actorType;
-        //    }
-        //    set
-        //    {
-        //        this.actorType = value;
-        //    }
-        //}
+        public Actor(Vector3 translation)
+        {
+            this.translation = translation;
+        }
 
         public void Update()
         {

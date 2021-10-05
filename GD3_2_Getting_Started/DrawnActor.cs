@@ -1,4 +1,6 @@
-﻿namespace GDLibrary.Actor
+﻿using System.Numerics;
+
+namespace GDLibrary.Actor
 {
     /// <summary>
     /// Represents any entity in the systems, inheriting from
@@ -9,8 +11,11 @@
     {
         private string texture, model, color;
 
-        public DrawnActor()
+        public DrawnActor(Vector3 translation, string texture,
+            string model, string color) : base(translation)
         {
+            this.texture = texture;
+            //...
         }
     }
 }
