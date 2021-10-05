@@ -28,13 +28,14 @@ namespace GDLibrary
         private void Start() //non-static or instance method
         {
             #region Print Demo
+
             //value types (pass by copy)
             int x = 10;
             double y = 20;
             Print(x, y);
             Console.WriteLine($"{x} and {y}");
 
-            #endregion
+            #endregion Print Demo
 
             #region GetRandInRange Demo
 
@@ -44,14 +45,18 @@ namespace GDLibrary
                 Console.WriteLine(randNum);
             }
 
-            #endregion
+            #endregion GetRandInRange Demo
 
             #region Point2D Demo
+
             Point2D p1 = new Point2D(5, 20);
             p1.X = 25;
             Console.WriteLine(p1.X);
-            Console.WriteLine(p1); 
-            #endregion
+            Console.WriteLine(p1);
+
+            #endregion Point2D Demo
+
+            #region Clone Demo
 
             Integer3 myIntA = new Integer3(1, 2, 3);
             Integer3 cloneMyIntA = (Integer3)myIntA.Clone();
@@ -62,7 +67,7 @@ namespace GDLibrary
             Console.WriteLine(myIntA.X);
             Console.WriteLine(cloneMyIntB.X);
 
-
+            #endregion Clone Demo
         }
 
         //EX - 1
@@ -81,19 +86,12 @@ namespace GDLibrary
             //Console.WriteLine(a + " and " + b);
         }
 
-
-        int DoSomething()
+        private int DoSomething()
         {
             //TODO - return to this immediately
             //HACK - works now but fails > 100 input
             throw new NotImplementedException("sdfsdfsdfsdfd");
             return -1;
         }
-
-
-
-
-
-
     }
 }
